@@ -17,7 +17,7 @@ const Register=()=>{
     const submitForm=async event=>{
         event.preventDefault()
         const data={name,email,password}
-        const url=`http://localhost:3004/add-user`
+        const url=`https://todos-backend-6.onrender.com/add-user`
         const options={
             method:'POST',
             headers:{

@@ -14,7 +14,7 @@ class NavBar extends Component{
 
     getData=async()=>{
         const token= Cookies.get('jwtToken')
-        const url=`http://localhost:3004/user-details`
+        const url=`https://todos-backend-6.onrender.com/user-details`
         const options={
             method:'GET',
             headers:{
@@ -38,7 +38,7 @@ class NavBar extends Component{
         const {name,email,password}=this.state
         const userData={name,email,password}
         const token=Cookies.get('jwtToken');
-        const response=await fetch('http://localhost:3004/update-user', {
+        const response=await fetch('https://todos-backend-6.onrender.com/update-user', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

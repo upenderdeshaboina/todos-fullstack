@@ -20,7 +20,7 @@ class Home extends Component {
 
     getTodos = async () => {
         const token = Cookies.get('jwtToken');
-        const response = await fetch('http://localhost:3004/get-todos', {
+        const response = await fetch('https://todos-backend-6.onrender.com/get-todos', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -36,7 +36,7 @@ class Home extends Component {
 
     handleAddTodo = async (todo) => {
         const token = Cookies.get('jwtToken');
-        const response = await fetch('http://localhost:3004/add-todo', {
+        const response = await fetch('https://todos-backend-6.onrender.com/add-todo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ class Home extends Component {
 
     handleUpdateTodo = async (todo) => {
         const token = Cookies.get('jwtToken');
-        const response = await fetch(`http://localhost:3004/update-todo/${todo.todo_id}`, {
+        const response = await fetch(`https://todos-backend-6.onrender.com/update-todo/${todo.todo_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ class Home extends Component {
 
     handleDeleteTodo = async (todoId) => {
         const token = Cookies.get('jwtToken');
-        const response = await fetch(`http://localhost:3004/delete-todo/${todoId}`, {
+        const response = await fetch(`https://todos-backend-6.onrender.com/delete-todo/${todoId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`
